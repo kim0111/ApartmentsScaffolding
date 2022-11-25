@@ -1,0 +1,87 @@
+﻿@model ApartmentsScaffolding.Models.Sale
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Details</title>
+	<link rel="stylesheet" href="~/Content/bootstrap.css" />
+</head>
+<body>
+	<script src="~/Scripts/jquery-3.6.1.min.js"></script>
+	<script src="~/Scripts/jquery.validate.min.js"></script>
+	<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+	<script src="~/Scripts/bootstrap.bundle.js"></script>
+	<div>
+		<h4>Sale</h4>
+		<hr />
+		<dl class="dl-horizontal">
+			<dt>
+				@Html.DisplayNameFor(model => model.Address)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.Address)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.Rooms)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.Rooms)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.SizeInM)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.SizeInM)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.Price)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.Price)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.OwnersPhone)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.OwnersPhone)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.isRenovation)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.isRenovation)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.PostedOnSite)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.PostedOnSite)
+			</dd>
+
+		</dl>
+	</div>
+	<p>
+		@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+		@Html.ActionLink("Back to List", "Index")
+	</p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ApartmentsScaffolding.Models.Sale>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+	<link rel="stylesheet" href="~/Content/bootstrap.css" />
+</head>
+<body>
+	<script src="~/Scripts/jquery-3.6.1.min.js"></script>
+	<script src="~/Scripts/jquery.validate.min.js"></script>
+	<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+	<script src="~/Scripts/bootstrap.bundle.js"></script>
+	<p>
+		@Html.ActionLink("Create New", "Create")
+	</p>
+	<table class="table">
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Address)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Rooms)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.SizeInM)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Price)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.OwnersPhone)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.isRenovation)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.PostedOnSite)
+			</th>
+			<th></th>
+		</tr>
+
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Address)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Rooms)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.SizeInM)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Price)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.OwnersPhone)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.isRenovation)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.PostedOnSite)
+				</td>
+				<td>
+					@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+					@Html.ActionLink("Details", "Details", new { id = item.Id }) |
+					@Html.ActionLink("Delete", "Delete", new { id = item.Id })
+				</td>
+			</tr>
+		}
+
+	</table>
+</body>
+</html>
